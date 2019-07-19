@@ -1,19 +1,13 @@
 agent: any
+
+configuration:
+  pushPrOnSuccess: true
+
 environment:
   variables:
-    FEATURE_ID: 5d2e755d816d970006e7cd4a
-    ENVIRONMENT_ID: 5c702eb6976aef2ff81b56e6
-
-stages:
-    - name: Build
-      agent: any
-      steps:
-        - echo: "Build realizado"
-    - name: Tests
-      agent: any
-      steps:
-        - echo: "Test realizado"
-configuration:
-    archiveArtifacts:
-        - quarks-cli.yaml
-        - scripts/hello.sh
+    variable_1: value_1
+    variable_2: value_2
+    
+steps:
+  - sh: "scripts/hello"
+  - sh: "scripts/hello"
