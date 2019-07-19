@@ -15,9 +15,9 @@ stages:
         - echo: "Test ok"
     - name: Deploy
       agent:
-        dockerImage: "gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3"
+        dockerImage: maven:3-alpine
       steps: 
-        - echo: "deploy"
+        - echo: "Hello from stage2"
 configuration:
     archiveArtifacts:
         - quarks-ci.yaml
