@@ -14,7 +14,11 @@ stages:
       steps:
         - echo: "Test ok"
     - name: Deploy
-      agent: maven:3-alpine
+      agent:
+        label: Deploy
+        customWorkspace: /tmp
+        dockerImage: "gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3"
+        args: -deploy
       steps: 
         - echo: "Hello from stage2"
 configuration:
