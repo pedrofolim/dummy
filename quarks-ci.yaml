@@ -16,7 +16,8 @@ stages:
     - name: Deploy
       agent:
         dockerImage: "gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3"
-        args: -deploy
+      steps: 
+        - echo: "deploy"
 configuration:
     archiveArtifacts:
         - quarks-ci.yaml
