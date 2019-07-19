@@ -1,20 +1,25 @@
 agent: any
+environment:
+  variables:
+    FEATURE_ID: 5d2e755d816d970006e7cd4a
+    ENVIRONMENT_ID: 5c702eb6976aef2ff81b56e6
 
 stages:
-    - name: First
-      agent: any
-      steps:
-        - sh: "./scripts/hello.sh"
     - name: Build
       agent: any
       steps:
-        - sh: "./scripts/build.sh"
+        - echo: "Build realizado"
     - name: Tests
       agent: any
       steps:
-        - sh: "./scripts/test.sh"
-
+        - echo: "Test realizado"
+    - name: Deploy
+      agent:
+        label: Deploy to Voyager
+        dockerImage: gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3
+        args: deploy
+        alwaysPull: false
 configuration:
     archiveArtifacts:
-        - Jenkinsfile.yaml
+        - quarks-cli.yaml
         - scripts/hello.sh
