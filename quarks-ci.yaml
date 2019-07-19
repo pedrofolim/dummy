@@ -8,11 +8,11 @@ stages:
     - name: Push
       agent: any
       steps:
-        - sh: "Build ok"
+        - echo: "Build ok"
     - name: Test
       agent: any
       steps:
-        - sh: "Test ok"
+        - echo: "Test ok"
 
 configuration:
     archiveArtifacts:
