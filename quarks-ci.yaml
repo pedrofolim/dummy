@@ -4,7 +4,7 @@ environment:
     FEATURE_ID: 5d2e755d816d970006e7cd4a
     ENVIRONMENT_ID: 5c702eb6976aef2ff81b56e6
   credentials:
-    - credentialId : dummyGitRepo
+    - credentialId : teste-yaml
       variable : LOGIN
 
 stages:
