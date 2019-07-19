@@ -27,7 +27,7 @@ stages:
         customWorkspace: /tmp
         dockerImage: "gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3"
       steps:
-        echo: "teste" 
+        - echo: "deploy"
 configuration:
     archiveArtifacts:
         - quarks-ci.yaml
