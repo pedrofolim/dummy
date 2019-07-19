@@ -13,3 +13,7 @@ stages:
       agent: any
       steps:
         - sh: "Test ok"
+
+configuration:
+    archiveArtifacts:
+        - quarks-cli.yaml
