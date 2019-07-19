@@ -22,11 +22,12 @@ stages:
       steps:
         - echo: "Test ok"
     - name: Deploy
-      agent:
+      agent: 
         label: Deploy
         customWorkspace: /tmp
         dockerImage: "gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3"
-        args: -deploy
+      steps:
+        echo: "teste" 
 configuration:
     archiveArtifacts:
         - quarks-ci.yaml
