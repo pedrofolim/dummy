@@ -19,8 +19,6 @@ stages:
         - echo: "Test ok"
     - name: Deploy
       agent: 
-        label: Deploy
-        customWorkspace: /tmp
         dockerImage: "gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3"
       steps:
         - echo: "deploy"
