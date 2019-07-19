@@ -1,5 +1,10 @@
 agent: any
 
+environment:
+  variables:
+    FEATURE_ID: "5d2e755d816d970006e7cd4a"
+    ENVIRONMENT_ID: "5c702eb6976aef2ff81b56e6"
+
 stages:
     - name: Build
       agent: any
@@ -18,9 +23,9 @@ stages:
         dockerImage: "gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3"
       steps: 
         - args: deploy
-      post:
-        success:
-          echo: "stage2 was a success"
+          post:
+            success:
+              echo: "stage2 was a success"
 
 configuration:
     archiveArtifacts:
