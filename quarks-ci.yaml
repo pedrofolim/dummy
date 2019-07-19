@@ -14,8 +14,7 @@ stages:
       steps:
         - echo: "Test ok"
     - name: Deploy
-      agent:
-        dockerImage: maven:3-alpine
+      agent: maven:3-alpine
       steps: 
         - echo: "Hello from stage2"
 configuration:
