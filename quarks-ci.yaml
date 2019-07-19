@@ -19,11 +19,10 @@ stages:
         - echo: "Test ok"
     - name: Deploy
       agent: 
-        dockerImage: "gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3"
-        customWorkspace: "/var/jenkins_home/workspace/teste-yaml_develop"
-        args: deploy
+        dockerImage: gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3
+        customWorkspace: /var/jenkins_home/workspace/teste-yaml_develop
       steps:
-        - echo: "finished"
+        - sh: build.sh
 configuration:
     archiveArtifacts:
         - quarks-ci.yaml
