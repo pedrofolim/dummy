@@ -1,5 +1,4 @@
-agent:
-  label: my_label
+agent: any
 environment:
   variables:
     FEATURE_ID: 5d2e755d816d970006e7cd4a
