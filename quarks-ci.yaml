@@ -1,20 +1,15 @@
 agent: any
 
 stages:
-    - name: First
-      agent: any
-      steps:
-        - sh: "./scripts/hello.sh"
     - name: Build
       agent: any
       steps:
-        - sh: "./scripts/build.sh"
-    - name: Tests
+        - echo: "Build ok"
+    - name: Push
       agent: any
       steps:
-        - sh: "./scripts/test.sh"
-
-configuration:
-    archiveArtifacts:
-        - Jenkinsfile.yaml
-        - scripts/hello.sh
+        - sh: "Build ok"
+    - name: Test
+      agent: any
+      steps:
+        - sh: "Test ok"
