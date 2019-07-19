@@ -13,12 +13,6 @@ stages:
       agent: any
       steps:
         - echo: "Test realizado"
-    - name: Deploy
-      agent:
-        label: Deploy to Voyager
-        dockerImage: gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3
-        args: deploy
-        alwaysPull: false
 configuration:
     archiveArtifacts:
         - quarks-cli.yaml
