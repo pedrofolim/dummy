@@ -16,4 +16,4 @@ stages:
 
 configuration:
     archiveArtifacts:
-        - quarks-cli.yaml
+        - quarks-ci.yaml
