@@ -18,10 +18,6 @@ stages:
         dockerImage: "gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3"
       steps: 
         - args: deploy
-          post:
-            success:
-              echo: "stage2 was a success"
-
 configuration:
     archiveArtifacts:
         - quarks-ci.yaml
