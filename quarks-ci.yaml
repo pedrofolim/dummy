@@ -15,7 +15,7 @@ stages:
         - echo: "Test ok"
     - name: stage2
       agent:
-        docketImage: gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3
+        dockerImage: "gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3"
       steps: 
         - args: deploy
       post:
