@@ -20,9 +20,8 @@ stages:
     - name: Deploy
       agent: 
         dockerImage: gcr.io/sysmap-quarks/quarks/voyager/builders/deploy:1.0.3
-        customWorkspace: /var/jenkins_home/workspace/teste-yaml_develop
       steps:
-        - sh: build.sh
+        - sh: deploy
 configuration:
     archiveArtifacts:
         - quarks-ci.yaml
